@@ -111,6 +111,7 @@ nav>ul {
 .banner-section {
     min-height: 100vh;
     position: relative;
+    padding: 105px 0;
     background: url('../assets/overlay.png') center/cover no-repeat black;
 }
 
@@ -124,6 +125,7 @@ nav>ul {
     bottom: 0;
     filter: blur(50px) opacity(0.4);
 }
+
 
 
 
