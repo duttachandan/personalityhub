@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+
+@font-face {
+    font-family: Aeonic;
+    src: url(../assets/text/AeonikTRIAL-Regular.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Common classes */
+
+body {
+    background: #000;
+    color: white;
+    font-family: Aeonic, sans-serif;
+}
+
+.container {
+    max-width: 1234px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Sora", sans-serif !important;
+}
+
+/* header section */
+header {
+    min-height: 10vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    z-index: 9;
+}
+
+header>div>div {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px !important;
+    backdrop-filter: blur(34px);
+    border-radius: 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo>a>img {
+    height: 32px;
+    width: 196px;
+    object-fit: contain;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-btn {
+    max-width: 155px;
+    height: 40px;
+    background: linear-gradient(to right, #090EDB, #8D1EA2);
+    padding: 1px;
+    border-radius: 12px;
+}
+
+.nav-btn>a {
+    padding: 12px 20px;
+    height: 100%;
+    width: 100%;
+    background: black;
+    border-radius: 12px;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.hamberger,
+#hamberger {
+    display: none;
+}
+
+
+/* Banner section */
+
+.banner-section {
+    min-height: 100vh;
+    position: relative;
+    background: url('../assets/overlay.png') center/cover no-repeat black;
+}
+
+.banner-section::after {
+    position: absolute;
+    content: '';
+    background: url('../assets/01.png') center/contain no-repeat;
+    display: inline-block;
+    width: 100%;
+    height: 90%;
+    bottom: 0;
+    filter: blur(50px) opacity(0.4);
+}
+
+
+
+@media screen and (max-width:1024px) {
+
+    nav,
+    .nav-btn {
+        display: none;
+    }
+
+    .hamberger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .hamberger>span {
+        display: inline-block;
+        background: white;
+        height: 2px;
+        width: 20px;
+    }
+
+    #hamberger:checked~nav,
+    #hamberger:checked~.nav-btn {
+        display: block;
+        flex-basis: 100%;
+    }
+
+    nav>ul {
+        flex-direction: column;
+        padding: 20px 0 0 0;
+    }
+
+    .nav-btn {
+        margin-inline: auto;
+        margin-top: 24px;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .nav-logo>a>img {
+        width: 70%;
+    }
+}
